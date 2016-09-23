@@ -82,3 +82,8 @@
 		|___
 			...
 ```
+
+### 10. 项目进度
+- [x] zh-front-app
+	- [ ] 由于在install vue-cli之前没有install webpack
+	- [ ] 好像是npm版本太低 update -g可以
