@@ -3,7 +3,7 @@
     <img class="logo" src="./assets/logo.png" />
     <hello></hello>
     <p>
-        This is my vue Test App!
+        test github is green ?
     </p>
     <p>
       To get a better understanding of how this boilerplate works, check out
