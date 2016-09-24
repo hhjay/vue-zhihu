@@ -80,7 +80,21 @@
 			...
 	zh-front-app (vue前端代码)
 		|___
-			...
+			src
+				|___
+					app
+						|___
+						|	components (公用组件)
+						|		|___
+						|			header (头部)
+						|				|___
+						|					nav (导航栏)
+						|			|___footer (尾部声明)
+						|___
+							home  (主页)
+							pages (头部以下主要内容)
+							topic (话题)
+
 ```
 
 ### 10. 项目进度
