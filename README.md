@@ -77,7 +77,12 @@
 |___
 	zh-crawl-app (py爬虫)
 		|___
-			...
+			venv (爬虫包)- pip install virtualenv(Python1.7.11 目前发现是这样子)
+				|		 - pip install requests beautifulsoup4
+				|___
+					home.py (home的抓取)
+					etc     (其他都是引入的包)
+
 	zh-front-app (vue前端代码)
 		|___
 			src
