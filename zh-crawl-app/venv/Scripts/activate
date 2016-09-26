@@ -40,7 +40,7 @@ deactivate () {
 # unset irrelevant variables
 deactivate nondestructive
 
-VIRTUAL_ENV="$(if [ "$OSTYPE" "==" "cygwin" ]; then cygpath -u 'D:\wamp\www\github\vue-zhihu\zh-crawl-app\venv'; else echo '/D/wamp/www/github/vue-zhihu/zh-crawl-app/venv'; fi;)"
+VIRTUAL_ENV="$(if [ "$OSTYPE" "==" "cygwin" ]; then cygpath -u 'D:\github\vue-zhihu\zh-crawl-app\venv'; else echo '/D/github/vue-zhihu/zh-crawl-app/venv'; fi;)"
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"

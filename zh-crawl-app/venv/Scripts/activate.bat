@@ -1,5 +1,5 @@
 @echo off
-set "VIRTUAL_ENV=D:\wamp\www\github\vue-zhihu\zh-crawl-app\venv"
+set "VIRTUAL_ENV=D:\github\vue-zhihu\zh-crawl-app\venv"
 
 if defined _OLD_VIRTUAL_PROMPT (
     set "PROMPT=%_OLD_VIRTUAL_PROMPT%"
