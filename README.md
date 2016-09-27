@@ -54,7 +54,6 @@
 		- [2.1] 用户列表
 	- [3] 搜索结果展示(话题)
 		- [3.1] 话题列表
-
 - [ ] 导航栏
 	- [1] logo 
 	- [2] 主导航栏
@@ -77,8 +76,7 @@
 |___
 	zh-crawl-app (py爬虫)
 		|___
-			venv (爬虫包)- pip install virtualenv(Python1.7.11 目前发现是这样子)
-				|		 - pip install requests beautifulsoup4
+			venv (爬虫包)
 				|___
 					home.py (home的抓取)
 					etc     (其他都是引入的包)
@@ -104,5 +102,11 @@
 
 ### 10. 项目进度
 - [x] zh-front-app
-	- [ ] 由于在install vue-cli之前没有install webpack
-	- [ ] 好像是npm版本太低 update -g可以
+	- [x] 由于在install vue-cli之前没有install webpack
+	- [x] 好像是npm版本太低 update -g可以
+- [x] zh-crawl-app
+	- [x] pip install virtualenv (Python1.7.11+ 目前发现是这样子)
+	- [x] virtualenv venv
+	- [x] venv: pip install requests beautifulsoup4
+	- [x] chardet: pip install chardet 判断文本编码的(eg utf-8/gb2312...)
+	- [x] pip更新: python ...忘了Q_Q
