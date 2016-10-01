@@ -39,4 +39,4 @@ def timeOut():
 				return 01 # 翻墙失败 但联网成功
 
 print timeOut()
-# print crawlPage(rootUrl)
+print crawlPage(rootUrl)
