@@ -4,7 +4,6 @@ rootUrl = 'https://www.zhihu.com'
 explore = rootUrl + '/explore'
 
 def crawlPage(url):
-	
 	res = urllib2.urlopen(url)
 	txt = res.read()
 	res.close

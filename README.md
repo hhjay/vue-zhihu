@@ -111,6 +111,7 @@
 	- [x] chardet: pip install chardet 判断文本编码的(eg utf-8/gb2312...)
 	- [x] pip更新: python ...忘了Q_Q
 	- [x] 引入urllib2模板,然后使用urlopen即可：打算使用.html暂存,然后每多少请求一次,推翻之前的那些模板吧,不然不同机子运行会有问题
-	- [ ] 判断网络连接 没有从文件读 然后定时器
+	- [x] 判断网络连接 没有从文件读 然后定时器
 	- [ ] 判断定时器a、使用os.system('netstat') b、os.systm('ping baidu.com')然后遍历 c、使用urlopen打开，失败即网络连接失败
+	- [ ] 判断拉取下来的编码
 
