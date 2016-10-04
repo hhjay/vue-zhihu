@@ -104,6 +104,7 @@
 - [ ] zh-front-app
 	- [x] 由于在install vue-cli之前没有install webpack
 	- [x] 好像是npm版本太低 update -g可以
+	- [x] 使用vue-router来路由url
 - [ ] zh-crawl-app
 	- [x] pip install virtualenv (Python1.7.11+ 目前发现是这样子)
 	- [x] virtualenv venv
