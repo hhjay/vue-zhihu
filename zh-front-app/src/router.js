@@ -14,7 +14,7 @@ router.map({
 		module: 'home',
 		tpl: 'home'
 	},
-	'/page': {
+	'/pages': {
 		
 	}
 })
