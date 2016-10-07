@@ -4,21 +4,23 @@ rootUrl = 'https://www.zhihu.com'
 explore = rootUrl + '/explore'
 
 def crawlPage(url):
-	res = urllib2.urlopen(url)
-	txt = res.read()
-	res.close
-	file = open("./buffer.html", "wb")
-	file.writelines(txt) # 写入多行在性能上比使用write写入更高
-	return txt
+	haveNet = crawlOut()
+	if haveNet == 000:
+		return False
+	elif haveNet == 200:
+		res = urllib2.urlopen(url)
+		txt = res.read()
+		res.close
+		file = open("./buffer.html", "wb")
+		file.writelines(txt) # 写入多行在性能上比使用write写入更高
+		return txt
+	else:
+		return False
 
-def timeOut():
+# 判断网络连接问题
+def crawlOut():
 	import urllib2
-	overRes = []
-	overStr = urllib2.urlopen(overUrl)
-	overRes.append(overWallS)
-	return overRes
 	linkRes = []
-	overRes = []
 	testUrl = ['http://www.163.com/', 'http://www.qq.com/']
 	for i in testUrl:
 		try:
@@ -27,15 +29,18 @@ def timeOut():
 		except:
 			linkRes.append(None)
 		if not any(linkRes):
-			return 00 # 联网失败
+			return 000 # 联网失败
 		else:
+			overRes = []
 			overUrl = 'https://www.google.com.hk'
-			overStr = urllib2.urlopen(overUrl)
-			overRes.append(overWallS)
+			try:
+				s = urllib2.urlopen(overUrl)
+				overRes.append(s)
+			except:
+				overRes.append(None)
 			if not any(overRes):
-				return 10 # 翻墙失败
+				return 100 # 翻墙失败
 			else:
-				return 01 # 翻墙失败 但联网成功
+				return 200 # 翻墙失败 但联网成功
 
-print timeOut()
 print crawlPage(rootUrl)
