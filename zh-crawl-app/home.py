@@ -18,19 +18,9 @@ def crawlPage(url):
 		fp.writelines(txt) # 写入多行在性能上比使用write写入更高
 		return txt
 
-# 判断网络连接问题
+# 判断网络连接问题 直接判断本地忘络 无须判断是否能翻墙
 def crawlOut():
 	import urllib2
-	# overRes = []
-	# overUrl = 'https://www.google.com.hk'
-	# try:
-	# 	s = urllib2.urlopen(overUrl)
-	# 	overRes.append(s)
-	# except:
-	# 	overRes.append(None)
-	# if not any(overRes):
-	# 	return 100 # 翻墙失败
-	# else:
 	overRes = []
 	testUrl = ['http://www.163.com/', 'http://www.qq.com/']
 	for i in testUrl:
