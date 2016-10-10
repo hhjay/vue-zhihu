@@ -5,7 +5,6 @@ explore = rootUrl + '/explore'
 
 def crawlPage(url):
 	haveNet = crawlOut()
-	print haveNet
 	if haveNet == 000:
 		fp = open("./home.html", "w")
 		txt = fp.readlines() # 读取所以内容
@@ -34,4 +33,22 @@ def crawlOut():
 	else:
 		return 200 # 翻墙失败 但联网成功
 
-print crawlPage(rootUrl)
+# 解析html格式
+def parseHtml():
+	import urllib2
+	from sgmllib import SGMLParser
+	class ListName(SGMLParser):
+		def __init__(self):
+			SGMLParser.__init__(self)
+			self.name = []
+
+		def handle_data(self, text):
+			if self.is_h4 == 1:
+				self.name.append(text)
+
+	main = crawlPage(rootUrl)
+	ListName = ListName()
+	ListName.feed(main)
+	print ListName.links
+
+parseHtml()
