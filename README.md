@@ -116,4 +116,5 @@
 	- [x] 判断定时器a、使用os.system('netstat') b、os.systm('ping baidu.com')然后遍历 c、使用urlopen打开，失败即网络连接失败
 	- [ ] 判断拉取下来的编码
 	- [ ] 对拉取下来的数据进行处理,html解析
+	- [ ] html解析之后，封装成json格式传值给vue，前后端分离
 - [ ] css模块化 webpack
