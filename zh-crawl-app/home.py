@@ -34,21 +34,36 @@ def crawlOut():
 		return 200 # 翻墙失败 但联网成功
 
 # 解析html格式
-def parseHtml():
-	import urllib2
-	from sgmllib import SGMLParser
-	class ListName(SGMLParser):
-		def __init__(self):
-			SGMLParser.__init__(self)
-			self.name = []
+# def parseHtml():
+# 	import urllib2
+# 	from sgmllib import SGMLParser
+# 	class ListName(SGMLParser):
+# 		def __init__(self):
+# 			SGMLParser.__init__(self)
+# 			self.name = []
+# 		def handle_data(self, text):
+# 			if self.is_h4 == 1:
+# 				self.name.append(text)
+# 	main = crawlPage(rootUrl)
+# 	ListName = ListName()
+# 	ListName.feed(main)
+# 	print ListName.links
 
-		def handle_data(self, text):
-			if self.is_h4 == 1:
-				self.name.append(text)
+from HTMLParser import HTMLParser
+class myHtmlParser(HTMLParser):  
+    #处理<!开头的内容  
+    def handle_decl(self,decl):  
+        print 'Encounter some declaration:'+ decl  
+    def handle_starttag(self,tag,attrs):  
+        print 'Encounter the beginning of a %s tag' % tag  
+    def handle_endtag(self,tag):  
+        print 'Encounter the end of a %s tag' % tag  
+    #处理注释  
+    def handle_comment(self,comment):   
+        print 'Encounter some comments:' + comment
 
-	main = crawlPage(rootUrl)
-	ListName = ListName()
-	ListName.feed(main)
-	print ListName.links
+m = myHtmlParser()
+h = crawlPage(rootUrl)
+m.feed(h)  
+m.close() 
 
-parseHtml()
