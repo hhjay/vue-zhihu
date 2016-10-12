@@ -37,15 +37,17 @@ def crawlOut():
 from HTMLParser import HTMLParser
 class myHtmlParser(HTMLParser):  
     #处理<!开头的内容  
-    def handle_decl(self,decl):  
-        print 'Encounter some declaration:'+ decl  
-    def handle_starttag(self,tag,attrs):  
-        print 'Encounter the beginning of a %s tag' % tag  
-    def handle_endtag(self,tag):  
-        print 'Encounter the end of a %s tag' % tag  
-    #处理注释  
-    def handle_comment(self,comment):   
+    def handle_decl(self,decl):
+        print 'Encounter some declaration:'+ decl
+    def handle_starttag(self,tag,attrs):
+        print 'Encounter the beginning of a %s tag' % tag
+    def handle_endtag(self,tag):
+        print 'Encounter the end of a %s tag' % tag
+    #处理注释
+    def handle_comment(self,comment):
         print 'Encounter some comments:' + comment
+    def handle_startendtag(self, comment):
+    	print self + "<br/>" + comment
 
 m = myHtmlParser()
 h = crawlPage(rootUrl)
