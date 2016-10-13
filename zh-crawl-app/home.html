@@ -29,7 +29,7 @@
 <meta name="baidu-site-verification" content="KPFppAFoYF4Kkdv9" />
 <meta property="qc:admins" content="00544670776201056375" />
 <link rel="canonical" href="http://www.zhihu.com" />
-<meta id="znonce" name="znonce" content="f3b7b11ee8c94e4caf2d5a66fa4e1909">
+<meta id="znonce" name="znonce" content="fa1b4094ccba475f86a9044c28146f1b">
 <!--[if lt IE 9]>
 <script src="https://static.zhihu.com/static/components/respond/dest/respond.min.js"></script>
 <link href="https://static.zhihu.com/static/components/respond/cross-domain/respond-proxy.html" id="respond-proxy" rel="respond-proxy" />
@@ -64,7 +64,7 @@
 
 <div class="view view-signin" data-za-module="SignInForm">
 <form method="POST">
-<input type="hidden" name="_xsrf" value="28611c1cb43bb4296ee0645a15473638"/>
+<input type="hidden" name="_xsrf" value="91b6c1f0474605c325efb441823032f5"/>
 <div class="group-inputs">
 
 <div class="email input-wrapper">
@@ -75,11 +75,15 @@
 <input type="password" name="password" aria-label="密码" placeholder="密码" required>
 </div>
 
-<div class="input-wrapper captcha-module" data-type="en" >
-<input id="captcha" name="captcha" placeholder="验证码" required data-rule-required="true" data-msg-required="请填写验证码">
-<div class="captcha-container">
-
-<img class="js-refreshCaptcha captcha" width="120" height="30" data-tooltip="s$t$看不清楚？换一张"  alt="验证码">
+<div class="Captcha input-wrapper" data-type="cn" data-za-module="Captcha">
+<div class="Captcha-operate">
+<input type="hidden" name="captcha" required data-rule-required="true" data-msg-required="请点击图中倒立的文字">
+<input type="hidden" name="captcha_type" value="cn" required>
+<label class="Captcha-prompt">请点击图中倒立的文字</label>
+<span class="Captcha-refresh js-refreshCaptcha sprite-index-icon-refresh"></span>
+</div>
+<div class="Captcha-imageConatiner">
+<img class="Captcha-image" alt="验证码" >
 </div>
 </div>
 
@@ -124,7 +128,7 @@
 <div class="view view-signup selected" data-za-module="SignUpForm">
 <form class="zu-side-login-box" action="/register/email" id="sign-form-1" autocomplete="off" method="POST">
 <input type="password" hidden> 
-<input type="hidden" name="_xsrf" value="28611c1cb43bb4296ee0645a15473638"/>
+<input type="hidden" name="_xsrf" value="91b6c1f0474605c325efb441823032f5"/>
 <div class="group-inputs">
 
 
@@ -207,7 +211,7 @@
 <script type="text/json" class="json-inline" data-name="current_user">["","","","-1","",0,0]</script>
 <script type="text/json" class="json-inline" data-name="env">["zhihu.com","comet.zhihu.com",false,null,false]</script>
 
-<script type="text/json" class="json-inline" data-name="ga_vars">{"user_created":0,"now":1476281164000,"abtest_mask":"------------------------------","user_attr":[0,0,0,"-","-"],"user_hash":0}</script>
+<script type="text/json" class="json-inline" data-name="ga_vars">{"user_created":0,"now":1476366906000,"abtest_mask":"------------------------------","user_attr":[0,0,0,"-","-"],"user_hash":0}</script>
 
 <script src="https://static.zhihu.com/static/revved/-/js/vendor.cb14a042.js"></script>
 <script src="https://static.zhihu.com/static/revved/-/js/closure/base.31f23a64.js"></script>
@@ -217,6 +221,6 @@
 <meta name="entry" content="ZH.entrySignPage" data-module-id="page-index">
 
 
-<input type="hidden" name="_xsrf" value="28611c1cb43bb4296ee0645a15473638"/>
+<input type="hidden" name="_xsrf" value="91b6c1f0474605c325efb441823032f5"/>
 </body>
 </html>
